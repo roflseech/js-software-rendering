@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script type="application/javascript" src="labsmaths.js"></script>
+        <script type="application/javascript" src="labsmeshes.js"></script>
+        <script type="application/javascript" src="raytracing.js"></script>
+        <script type="application/javascript" src="raytracingexample.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="Setup();">
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <br>
+        <br>
+        Set light position with Translation parameters.<br>
+        Set scene rotation with Rotation parameters.<br>
+        Press Process Shadows to render in hgiher quality and with shadows.<br>
+        Press Light Mode to add another light source.<br>
+        <br>
+        <br>
+        <div class="slider-container">
+            <h4 >Rotation X</h4> 
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationx">
+            <input type="text" id = "rotationxtext" value="0">
+        </div>
+        <div class="slider-container">
+            <h4>Rotation Y</h4>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationy"> 
+            <input type="text" id = "rotationytext" value="0">
+        </div>
+        <div class="slider-container">
+            <h4>Rotation Z</h4>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationz">
+            <input type="text" id = "rotationztext" value="0">
+        </div>
+        <br>
+        <div class="slider-container">
+            <h4 >Translation X</h4> 
+            <input type="range" min="-1000" max="1000" value="0" class="slider" id="translationx">
+            <input type="text" id = "translationxtext" value="0">
+        </div>
+        <div class="slider-container">
+            <h4>Translation Y</h4>
+            <input type="range" min="-1000" max="1000" value="0" class="slider" id="translationy"> 
+            <input type="text" id = "translationytext" value="0">
+        </div>
+        <div class="slider-container">
+            <h4>Translation Z</h4>
+            <input type="range" min="-1000" max="1000" value="0" class="slider" id="translationz">
+            <input type="text" id = "translationztext" value="0">
+        </div>
+        <br>
+        <div class="slider-container">
+            <h4>Scale down</h4> 
+            <input type="range" min="1" max="20" value="4" class="slider" id="scale">
+            <input type="text" id = "scaletext" value="0">
+        </div>
+        <div class="slider-container">
+            <h4>Light intensity</h4> 
+            <input type="range" min="10" max="1000" value="100" class="slider" id="lightintensity">
+            <input type="text" id = "lightintensitytext" value="0">
+        </div>
+        <button onclick="DrawWithShadows()">Process Shadows</button> 
+        <button onclick="LightMode()">Light Mode</button> 
+    </body>
+</html>

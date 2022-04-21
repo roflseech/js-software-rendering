@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script type="application/javascript" src="labsmaths.js"></script>
+        <script type="application/javascript" src="labsmeshes.js"></script>
+        <script type="application/javascript" src="labsrender.js"></script>
+        <script type="application/javascript" src="multipleobjects.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="Setup();">
+        <canvas id="canvas" width="400" height="400"></canvas>
+        <br>
+        <br>
+        <div class="slider-container">
+            <h1 >Rotation X</h1> 
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationx">
+            <input type="text" id = "rotationxtext" value="0">
+        </div>
+        <div class="slider-container">
+            <h1>Rotation Y</h1>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationy"> 
+            <input type="text" id = "rotationytext" value="0">
+        </div>
+        <div class="slider-container">
+            <h1>Rotation Z</h1>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rotationz">
+            <input type="text" id = "rotationztext" value="0">
+        </div>
+        <button onclick="GenerateRandomCubes()">Generate new</button> 
+    </body>
+</html>
